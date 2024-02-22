@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Numérico</title>
+</head>
+<body>
+
+<form id="formulario">
+    <label for="campoNumerico">Ingrese un número:</label>
+    <input type="text" id="campoNumerico" name="campoNumerico">
+    <button type="submit">Enviar</button>
+</form>
+
+
+<script>
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    
+    let valor = document.getElementById("campoNumerico").value;
+    
+    
+    if (isNaN(valor)) {
+        alert("Por favor, ingrese solo datos numéricos.");
+        document.getElementById("campoNumerico").focus(); 
+        return false; 
+    }
+    
+    
+});
+</script>
+
+</body>
+</html>
